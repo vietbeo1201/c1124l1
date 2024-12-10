@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction Javascript</title>
+    <!--    Nhúng external -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+<!--  Các cách nhúng JS  -->
+// Các cách khai báo biến: var, let, const
+// Các các hiển thị (output)
+// Cách cách lấy dữ liệu (input)
+    var x, y, z; // Khai báo biến, với từ khóa var (keyword)
+    console.log(x);
+    console.log(y);
+    console.log(z);
+    var firstName;
+    console.log(firstName);
+    var age;
+    console.log(age);
+    x = 10; // dấu = là toán tử gán.
+    console.log(x);
+    y = 20; // dấu = là toán tử gán.
+    console.log(y);
+    z = x + y; // expression
+    console.log(z);
+
+    /*
+      Cách hiển thị thông tin lên trình duyệt:
+      Cách 1: Hiện ra một popup trên trình duyệt
+      Cách 2: Nó sẽ in ra nội dung trong body
+      Cách 3: Nó sẽ in ra cửa sổ console của Chrome Develop Tool
+     */
+
+    // Output (DISPLAY)
+    // alert(z); // Cách 1: Hiện ra một popup trên trình duyệt
+    // document.write(z); // Cách 2: Nó sẽ in ra nội dung trong body
+    // console.log(z); // Cách 3: Nó sẽ in ra cửa sổ console của Chrome Develop Tool
+
+    // name = prompt("Vui lòng nhập tên của bạn");
+    // console.log(name);
+    // document.write(name);
+    // alert(name);
+
+    function showMessage(msg) {
+        alert(msg)
+    }
+</script>
+<!--nhúng inline-->
+<button onclick="showMessage('Hello World!')">Click here!</button>
+<button onclick="showMessage('Xin chào!')">Hiển thị thông báo là Xin chào!</button>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
+<!--<script>-->
+<!--        nhúng internal -->
+<!--// alert("Hello World!");-->
+<!--</script>-->
+</body>
+</html>

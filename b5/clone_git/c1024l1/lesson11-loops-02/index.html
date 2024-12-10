@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 11: Loop 02</title>
+</head>
+<body>
+Nhớ mùa thu Hà Nội<br>
+Nhớ mùa thu Hà Nội<br>
+<img src="coding.gif" alt="">
+Nhớ mùa thu Hà Nội<br>
+Nhớ mùa thu Hà Nội<br>
+<hr>
+<script>
+    let i;
+    for (i = 0; i >= 0;) {
+        document.write("Học JavaScript! " + i + "<br>");
+        i++;
+    }
+
+    // let count = 0;
+    // while (count++ < 10) {
+    //     ++count;
+    // }
+    // console.log(count); // 11
+
+    // let counter = 0;
+    // do {
+    //     counter++;
+    //     if (counter === 3) {
+    //         continue;
+    //     }
+    //     document.write("Học JavaScript! " + counter + "<br>");
+    // } while (counter < 10)
+
+    // In ra tam giác
+    // for (let i = 0; i < 10; i++) {
+    //     for (let j = i + 1; j < 10; j++) {
+    //         document.write("&nbsp;&nbsp;");
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 5; j >= i; j--) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
