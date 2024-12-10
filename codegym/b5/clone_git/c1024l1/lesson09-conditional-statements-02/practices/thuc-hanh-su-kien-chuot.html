@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Thực hành] Sự kiện chuột</title>
+</head>
+
+<body>
+  <form action="">
+    <img width="30%" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" alt=""
+      id="myImage">
+    <p>Click button below to move the image to right</p>
+    <!-- 1. inline -->
+    <button type="button" onclick="move('left')">Move Left</button>
+    <input type="button" onclick="move('right');" value="Move right">
+  </form>
+  <script>
+    // 2. internal (Nhúng JS trực tiếp vào trong tệp HTML)
+    // Thường áp dụng cho các mã script ngắn
+    // =: toán tử gán
+    // null: Là giá trị null (không trỏ đến vùng nhớ nào trong bộ nhớ)
+    // Kiểu dữ liệu nguyên thủy trong JS (7): number, string, boolean, null, underfined, Symbol, BigInt
+    // Kiểu dữ liệu đối tượng (Object): Array, Object, Function
+    let imgObj = null; // Kết thúc một câu lệnh
+    imgObj = document.getElementById("myImage");
+    console.log(imgObj);
+
+    // Khai báo 
+    function init() {
+      imgObj = document.getElementById('myImage');
+      imgObj.style.position = 'relative';
+      imgObj.style.left = '0px';
+    }
+
+    // camelCase (Lạc đà)
+    function move(position) {
+      // if đủ
+      if (position === 'left') {
+        imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+      } else {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+      }
+    }
+    window.onload = init;
+  </script>
+  <script src="main.js"></script> <!-- 3. external (Khuyến khích) -->
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 16 OOP 1</title>
+</head>
+<body>
+<script>
+    // Thủ tục
+    // let luongCoBan = 3000000;
+    // let gioLamThem = 10;
+    // let rate = 20;
+    //
+    // // Khai báo hàm
+    // function nhanLuong(luongCoBan, gioLamThem, rate) {
+    //     console.log(luongCoBan);
+    //     console.log(gioLamThem);
+    //     console.log(rate);
+    //     return luongCoBan + (gioLamThem * rate);
+    //     // TODO: Logic nghiep vu
+    // }
+    //
+    // // Gọi hàm
+    // const luong = nhanLuong(luongCoBan, gioLamThem, rate);
+    // console.log(luong);
+
+    // OOP literal
+    // let nhanVien = {
+    //     // Thuộc tính (Properties)
+    //     luongCoBan: 3000000,
+    //     gioLamThem: 10,
+    //     rate: 20,
+    //     // Phương thức (method)
+    //     nhanLuong: function () {
+    //         return this.luongCoBan + (this.gioLamThem * this.rate);
+    //     }
+    // }
+    // nhanVien.luongCoBan = 6000000;
+    // console.log(nhanVien.nhanLuong());
+
+    // function Person(firstName, lastName, age) {
+    //     this.firstName = firstName;
+    //     this.lastName = lastName;
+    //     this.age = age;
+    //
+    //     this.display = function () {
+    //         return `Tôi tên là ${this.firstName} ${this.lastName}, tôi ${this.age} tuổi!`;
+    //     }
+    // }
+    //
+    // const myMother = new Person('Alice', '', 20);
+    // const myFather = new Person('Bob', '', 30);
+    // console.log(myMother);
+    // let f = 'firstName';
+    // console.log(myMother[f]);
+    // console.log(myMother.display());
+    // console.log(myFather.display())
+
+    class Person {
+        #firstName;
+        #lastName;
+        #age;
+
+        constructor(firstName, lastName, age) {
+            this.#firstName = firstName;
+            this.#lastName = lastName;
+            this.#age = age;
+        }
+
+        display() {
+            return `Tôi tên là ${this.#firstName} ${this.#lastName}, tôi ${this.#age} tuổi!`;
+        }
+
+        getFirstName() {
+            return this.#firstName;
+        }
+
+        setFirstName(firstName) {
+            this.#firstName = firstName;
+        }
+    }
+
+    class Student extends Person {
+        #gpa;
+
+        constructor(firstName, lastName, age, gpa) {
+            super(firstName, lastName, age);
+            this.#gpa = gpa;
+        }
+
+        getGPA() {
+            console.log(super.display());
+            return this.#gpa;
+        }
+    }
+
+    const myMother = new Student('Alice', '', 20, 3.9);
+    // const myFather = new Person('Bob', '', 30);
+    // console.log(myMother.#firstName);
+    // // console.log(myMother.#age);
+    // myMother.setFirstName('Châu');
+    // console.log(myMother.display());
+    // console.log(myMother.getFirstName());
+    console.log(myMother.getGPA())
+    // // console.log(myFather.display())
+    //
+    // console.log(myFather.getGPA());
+
+</script>
+</body>
+</html>

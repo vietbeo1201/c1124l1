@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1 id="demo">Bảng cửu chương</h1>
+<div id="result"></div>
+<script>
+    // DOM API
+    let table = '<table border="1">';
+    for (let i = 1; i < 10; i++) {
+        table += '<tr>';
+        for (let j = 2; j < 10; j++) {
+            table = table + "<td>" + j + "*" + i + "=" + i * j + "</td>";
+        }
+        table += '</tr>';
+    }
+    table += '</table>';
+    document.getElementById("result").innerHTML = table;
+</script>
+</body>
+</html>

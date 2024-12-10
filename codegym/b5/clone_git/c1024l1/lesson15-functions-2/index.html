@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 15: Functions 2</title>
+</head>
+
+<body>
+  <script>
+    // Pass-by-value (Truyền giá trị)
+    // let counter = 10;
+    // function increment(count) {
+    //   count++;
+    //   console.log('count trong ham increment la: ' + count);
+    // }
+    // console.log('counter truoc khi goi ham increment: ' + counter);
+    // increment(counter);
+    // console.log('counter sau khi goi ham increment: ' + counter);
+
+    // let number1 = 10;
+    // let number2 = 20;
+    // function swap(num1, num2) {
+    //   let temp = num1; // 10
+    //   num1 = num2; // 20
+    //   num2 = temp; // 10
+    //   console.log('num1: ' + num1);
+    //   console.log('num2: ' + num2);
+    // }
+    // console.log('number1: ' + number1); // 10
+    // console.log('number2: ' + number2); // 20
+    // swap(number1, number2);
+    // console.log('number1: ' + number1); // 10
+    // console.log('number2: ' + number2); // 20
+
+    // const arr = [10, 20];
+    // function swap(newArr) {
+    //   const temp = newArr[0]; // 10
+    //   newArr[0] = newArr[1]; // 20
+    //   newArr[1] = temp;
+    // }
+    // console.log('Mảng arr trước khi gọi hàm swap: ' + arr.join(','));
+    // swap(arr); // pass-by-references (Truyền tham chiếu)
+    // console.log('Mảng arr sau khi gọi hàm swap: ' + arr.join(','));
+
+    // Phạm vi (scope)
+    // function viduvar() {
+    //   if (true) {
+    //     var fullName = 'Anh Nguyen';
+    //     // console.log(fullName);
+    //   }
+    //   console.log(fullName);
+    //   for (var i = 0; i < 3; i++) {
+    //     console.log(i);
+    //   }
+    //   console.log('Biến i bên ngoài vòng lặp for: ', i);
+    // }
+    // // console.log(fullName); // fullName is not undefined
+    // viduvar();
+
+    // function vidulet() {
+    //   for (let i = 0; i < 3; i++) {
+    //     console.log(i);
+    //   }
+    //   // console.log('Biến i bên ngoài vòng lặp for: ', i);
+
+    //   if (true) {
+    //     let fullName = 'Anh Nguyen';
+    //     console.log(fullName);
+    //   }
+    //   // console.log(fullName);
+    // }
+    // vidulet();
+
+    function sayHello(message) {
+      return message ? console.log(`Xin chào ${message}`) : null;
+    }
+    // sayHello('CodeGym');
+    sayHello();
+  </script>
+</body>
+
+</html>
