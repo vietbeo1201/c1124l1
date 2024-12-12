@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai tap 5.3</title>
 </head>
 <body>
-$END$
+
+<h1>Market Research Survey</h1>
+<p>Please take a few moments to complete this satisfaction survey</p>
+
+<form action="" style="font-family: Lucida Grande">
+  <strong>what is your age range?</strong><br>
+  <select name="" >
+    <option value="18-24" >18-24</option>
+    <option value="25-30">25-30</option>
+    <option value="31+">31+</option>
+  </select>
+
+  <br><br>
+  <strong>what is your yearly income range?</strong> <br>
+  <select name="" >
+    <option value="0-$25k" >0-$25,000</option>
+    <option value="$25k-100k">$2500-$100,000</option>
+    <option value="$100k+">$100,000+</option>
+  </select>
+  
+  <br><br>
+  <strong>Gender</strong><br>
+  <input type="radio" name="gender">Male<br>
+  <input type="radio" name="gender">Female
+  
+  <br><br>
+  <strong>which of the following have your purchased in the last 2 months. Please cheack all that apply</strong> <br>
+  <input type="checkbox" name="product">Product 1<br>
+  <input type="checkbox" name="product">Product 2<br>
+  <input type="checkbox" name="product">Product 3<br>
+
+  <br><br>
+  <strong>How often would you use our new product?</strong><br>
+  <input type="radio" name="often">Daily <br>
+  <input type="radio" name="often">Weekly <br>
+  <input type="radio" name="often">Monthly
+
+  <br><br>
+  <strong>What would you pay for the new products?</strong> <br>
+  $ <input type="number" name="dollar">(Dollars)
+  . <input type="number" name="Cent" >(Cents)
+
+  <br><br>
+  <strong>What feature would you like to see in the new products.</strong><br>
+  <textarea></textarea>
+
+  <p>Please rate your level of agreement with the following statements.</p>
+  <table border="1">
+    <tr>
+      <td></td>
+      <td>Strongly Disagree</td>
+      <td>Disagree</td>
+      <td>Agree</td>
+    </tr>
+    <tr>
+      <td>Our product are priced fairly</td>
+      <td><input type="radio" name="strongly_disagree">1</td>
+      <td><input type="radio" name="disagree">2</td>
+      <td><input type="radio" name="agree">3</td>
+    </tr>
+    <tr>
+      <td>Our products are high quality</td>
+      <td><input type="radio" name="strongly_disagree">1</td>
+      <td><input type="radio" name="disagree">2</td>
+      <td><input type="radio" name="agree">3</td>
+    </tr>
+    <tr>
+      <td>You would recommend our product to a friend or coworker</td>
+      <td><input type="radio" name="strongly_disagree">1</td>
+      <td><input type="radio" name="disagree">2</td>
+      <td><input type="radio" name="agree">3</td>
+    </tr>
+  </table>
+
+  <input type="submit" value="Submit">
+
+</form>
+
 </body>
 </html>
