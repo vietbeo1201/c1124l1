@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<form>
+    <label> nhap so thu 1 </label>
+    <input type="text" id="SoThu1" >
+    <br>
+    <label> nhap so thu 2 </label>
+    <input type="text" id="SoThu2">
+    <br>
+    <label for="calculate"> nuoc ban muon chuyen sang </label>
+    <select id="calculate">
+        <option value="cong">+</option>
+        <option value="tru">-</option>
+        <option value="nhan">x</option>
+        <option value="chia">/</option>
+    </select>
+    <br>
+    <button type="button" onclick="Calculate()">calculate</button>
+    <div id="result"> ket qua</div>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
