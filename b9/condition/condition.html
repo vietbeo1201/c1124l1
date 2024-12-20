@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>condition</title>
+</head>
+<body>
+<h1>Condition</h1>
+<ol>
+    <li>if</li>
+    <li>switch-case</li>
+</ol>
+<script>
+    // tinh dien tich hinh tron
+    // const radius = +prompt("nhap ban kinh hinh tron:")
+    // if (radius >= 0) {
+    //     const area = Math.PI * radius * radius
+    //     console.log(area.toFixed(2))
+    // }
+
+    //phan loai so chan so le
+    // const numbers = +prompt("nhap so bat ky: ")
+    // if (numbers % 2 === 0) {
+    //     console.log("day la so chan")
+    // } else {
+    //     console.log("day la so le")
+    // }
+
+    //neu diem >= 85 loai A
+    //neu diem >= 75 loai B
+    //neu diem >= 55 loai C
+    //neu diem >= 45 loai D
+    // const diem = +prompt("nhap diem cua ban: ")
+    // if (diem >= 85) {
+    //     document.write("loai A")
+    // } if (diem >= 75) {
+    //     document.write("loai B")
+    // } if (diem >= 55) {
+    //     document.write("loai C")
+    // } if (diem >= 45) {
+    //     document.write("loai D")
+    // } else {
+    //     document.write("loai E")
+    // }
+
+    //sap xet 3 so ng dung nhap
+    const a = +prompt("nhap so thu nhat: ")
+    const b = +prompt("nhap so thu hai: ")
+    const c = +prompt("nhap so thu ba: ")
+    if (a > b) {
+        if (a > c) {
+            alert(a + " la so lon nhat")
+        } if (a < c) {
+            alert(c + " la so lon nhat")
+        } else {
+            alert(a + " va " + c + " la so lon nhat")
+        }
+    } if (a < b) {
+        if (b > c) {
+            alert(b + " la so lon nhat")
+        } if (b < c) {
+            alert(c + " la so lon nhat")
+        } else {
+            alert(c + " va " + b + " la so lon nhat")
+        }
+    } if (a === b) {
+        if (b > c) {
+            alert(b + " va " + a + " la so lon nhat")
+        } else {
+            alert(c + " la so lon nhat")
+        }
+    }
+
+</script>
+</body>
+</html>

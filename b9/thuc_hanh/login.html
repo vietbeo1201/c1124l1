@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh 3</title>
+</head>
+<body>
+
+<!--Nếu tên nhập vào là Admin thì yêu cầu nhập mật khẩu.-->
+<!--Nếu mật khẩu là TheMaster thì in ra chuỗi Welcome.-->
+<!--Nếu mật khẩu nhập vào là null in ra chuỗi Canceled.-->
+<!--Còn lại in ra chuỗi Wrong password.-->
+<!--Nếu tên nhập vào là null in ra chuỗi canceld.-->
+<!--Còn lại in ra chuỗi “I don’t know you"-->
+
+<script>
+    let id = prompt("enter id")
+    if (id === "admin"){
+        let password = prompt("enter password")
+        if (password === "TheMaster"){
+            alert("Welcome admin")
+        } else {
+            alert("thang nao fake admin a`?")
+        }
+    } else if (!id){
+        alert("Cancel")
+    } else {
+        alert("I don't know you!")
+    }
+</script>
+
+</body>
+</html>

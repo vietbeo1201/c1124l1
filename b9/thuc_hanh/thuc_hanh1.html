@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh 1</title>
+</head>
+<body>
+<!--Những năm chia hết cho 100 mà không chia hết cho 400 thì KHÔNG PHẢI là năm nhuận-->
+<!--Những năm chia hết đồng thời cho 4 và 100 và 400 là năm nhuận-->
+<!--Những năm chia hết cho 4 mà không chia hết cho 100 va 400 là năm nhuận-->
+<script>
+let year = +prompt("enter a number");
+if (year % 4 === 0){
+    if (year % 100 === 0){
+        if (year % 400 === 0){
+            alert("day la nam nhuan")
+        } else {
+            alert("day khong phai la nam nhuan")
+        }
+    } else {
+        alert("day la nam nhuan")
+    }
+} else {
+    alert("day khong phai la nam nhuan")
+}
+
+</script>
+</body>
+</html>
