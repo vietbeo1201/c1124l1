@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap 1</title>
+</head>
+<body>
+
+<script>
+    // sort people with age >20
+    // then calculate with bmi = weight / (height ^ 2)
+    // bmi < 18.5 underweight ;
+    // 18.5 <= bmi < 25 normal
+    // 25 <= bmi < 30 overweight
+    // 30 <= bmi  obese
+    age = prompt("enter age");
+    weight = prompt("enter your weight");
+    height = prompt("enter your height(m)");
+     if (age < 20) {
+         document.write("we can not calculate BMI with your age: " + age)
+     } else {
+         bmi = weight/( height * height );
+     }
+     if (bmi < 18.5) {
+         document.write("you are underweight with bmi: " + bmi)
+     } else if (18.5 <= bmi && bmi < 25) {
+         document.write("you are normal with bmi: " + bmi)
+     } else  if (25 <= bmi && bmi < 30) {
+         document.write("you are overweight with bmi: " + bmi)
+     } else {
+         document.write("you are obese with bmi: " + bmi)
+     }
+
+</script>
+
+</body>
+</html>

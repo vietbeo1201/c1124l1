@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap 2</title>
+</head>
+<body>
+
+    <input type="text" name="" id="input">
+    <button onclick="dayinmonth()">calculate days in a month</button>
+    <div id="output"></div>
+
+
+<script>
+
+    function dayinmonth() {
+        const input = document.getElementById("input").value;
+        let result;
+
+        console.log(input);
+        switch (input) {
+            case "1": result = "January have 31 days";
+                break;
+            case 2:
+                result = "February has 28 or 29 days (leap year).";
+                break;
+            case 3:
+                result = "March has 31 days.";
+                break;
+            case 4:
+                result = "April has 30 days.";
+                break;
+            case 5:
+                result = "May has 31 days.";
+                break;
+            case 6:
+                result = "June has 30 days.";
+                break;
+            case 7:
+                result = "July has 31 days.";
+                break;
+            case 8:
+                result = "August has 31 days.";
+                break;
+            case 9:
+                result = "September has 30 days.";
+                break;
+            case 10:
+                result = "October has 31 days.";
+                break;
+            case 11:
+                result = "November has 30 days.";
+                break;
+            case 12:
+                result = "December has 31 days.";
+                break;
+            default:
+                result = "Please enter a valid month (1-12).";
+        }
+        document.getElementById("output").innerText = result;
+        console.log(result);
+    }
+
+</script>
+</body>
+</html>
