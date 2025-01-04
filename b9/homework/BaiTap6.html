@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap 6</title>
+</head>
+<body>
+
+<label>
+    <input type="checkbox" id="box1"> first check <br>
+    <input type="checkbox" id="box2"> second check <br>
+    <input type="checkbox" id="box3"> third check <br>
+</label>
+<script>
+    // Lấy các checkbox
+    const box1 = document.getElementById("box1");
+    const box2 = document.getElementById("box2");
+    const box3 = document.getElementById("box3");
+
+    box2.addEventListener('change', checkBoxes);
+    box3.addEventListener('change', checkBoxes);
+    box1.addEventListener('change', checkBoxes);
+    let counter = 0;
+
+    function checkBoxes() {
+        console.log(box1.checked);
+        console.log(box2.checked);
+        console.log(box3.checked);
+        if (box1.checked && box2.checked && box3.checked) {
+            counter++;
+            if (counter === 1) {
+                box2.checked = false;
+            } else if (counter === 2) {
+                box1.checked = false;
+            } else if (counter === 3) {
+                box3.checked = false;
+                counter = 0;
+            }
+            console.log(counter);
+            console.log("Box2 has been unchecked automatically.");
+        }
+        // // Nếu box2 được check lại, tự động bỏ chọn box1
+        // if (box3.checked && box1.checked) {
+        //     box1.checked = false;
+        //     console.log("Box1 has been unchecked because Box2 was checked.");
+        // }
+
+    }
+</script>
+</body>
+</html>
