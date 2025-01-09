@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 17: OOP 1</title>
+</head>
+<body>
+<h1>Lesson 17: OOP 1</h1>
+                                                <!--de bai-->
+<!--<table border="1">-->
+<!--    <tr>-->
+<!--        <td>Tên</td>-->
+<!--        <td>Tuổi</td>-->
+<!--        <td>Địa Chỉ</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td id="personName"></td>-->
+<!--        <td id="personAge"></td>-->
+<!--        <td id="personLanguage"></td>-->
+<!--    </tr>-->
+<!--</table >-->
+<!--    <script>-->
+<!--        de bai-->
+<!--        const students = []-->
+<!--        const personName = "Viet"-->
+<!--        const personAge = 24-->
+<!--        const personLanguage = "VNese"-->
+<!--        -->
+<!--        document.getElementById("personName").innerHTML = personName;-->
+<!--        document.getElementById("personAge").innerHTML = personAge;-->
+<!--        document.getElementById("personLanguage").innerHTML = personLanguage;-->
+<!--    </script>-->
+
+<!--                                            cach 1-->
+<!--    <table border="1" id = "personTable"></table >-->
+<!--    <script>-->
+<!--        const student = []-->
+<!--        const person1 = {-->
+<!--            name: "Viet",-->
+<!--            age: 24,-->
+<!--            language: "VNese",-->
+<!--        }-->
+<!--        const person2 = {-->
+<!--            name: "Hieu",-->
+<!--            age: 24,-->
+<!--            language: "VNese",-->
+<!--        }-->
+<!--        student.push(person1)-->
+<!--        student.push(person2)-->
+<!--        const table = document.getElementById("personTable");-->
+
+<!--        let data = `        <tr>-->
+<!--            <td>Tên</td>-->
+<!--            <td>Tuổi</td>-->
+<!--            <td>Địa Chỉ</td>-->
+<!--        </tr>`;-->
+<!--        for (let i = 0; i < student.length; i++) {-->
+<!--            data +=  `        <tr> -->
+<!--            <td>${student[i].name}</td>-->
+<!--            <td>${student[i].age}</td>-->
+<!--            <td>${student[i].language}</td>-->
+<!--        </tr>`-->
+<!--        };-->
+<!--        table.innerHTML = data;-->
+<!--    </script>-->
+<!--                                                cach 2-->
+<table border="1" id="personTable"></table>
+<script>
+    const students = []
+    class Student {
+        constructor( name, age, language  ){
+            this.name = name;
+            this.age = age;
+            this.language = language;
+        }
+    }
+    let person1 = new Student("viet", 18, "Vietnamese")
+    students.unshift(person1);
+    let data = `<tr>
+            <td>Tên</td>
+            <td>Tuổi</td>
+            <td>Địa Chỉ</td>
+        </tr>`;
+
+    let table = document.getElementById("personTable");
+    for (let i = 0; i < students.length; i++) {
+        data +=  `<tr>
+            <td>${students[i].name}</td>
+            <td>${students[i].age}</td>
+            <td>${students[i].language}</td>
+        </tr>`
+    }
+    table.innerHTML = data;
+</script>
+
+</body>
+</html>
