@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Tax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<h1>Hệ thống tính thuế thu nhập cá nhân</h1>
+<p><em>Chỉ cần điền Tổng thu nhập, bạn sẽ biết ngay mức thuế TNCN phải nộp</em></p>
+<form onsubmit="calculateTax(); return false;">
+    <table>
+        <tr>
+            <td><i class="fa-solid fa-sack-dollar"></i> <label for="income">Tổng thu nhập: <span style="color: red">(*)</span></label></td>
+            <td><input type="number"
+                       name="income"
+                       id="income"
+                       value="17000000"
+                       onkeyup="calculateTax()"
+                       onchange="calculateTax()"></td>
+        </tr>
+        <tr>
+            <td><i class="fa-solid fa-people-group"></i> <label for="depend">Số người phụ thuộc:</label></td>
+            <td><input type="number" name="depend" id="depend"></td>
+        </tr>
+        <tr>
+            <td><i class="fa-solid fa-hand-holding-dollar"></i> Thuế TNCN phải nộp:</td>
+            <td id="result"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    const LEVEL_1 = 0;
+    const LEVEL_2 = 1;
+    const LEVEL_3 = 2;
+    const LEVEL_4 = 3;
+    function calculateTax() {
+        let level = 0;
+        let tax = 0;
+        let total = 0;
+        let nonTaxableIncome = 11_000_000;
+        const income = parseInt(document.getElementById("income").value);
+        console.log(isNaN(document.getElementById("depend").value))
+        const depend = !document.getElementById("depend").value ? 0 : parseInt(document.getElementById("depend").value);
+        // taxableIncome = Thu nhập chịu thuế
+        taxableIncome = income > nonTaxableIncome ? income - nonTaxableIncome : income;
+        if (taxableIncome <= 5_000_000) {
+            level = 0;
+        } else if (taxableIncome <= 10_000_000) {
+            level = 1;
+        } else if (taxableIncome <= 18_000_000) {
+            level = 2;
+        } else if (taxableIncome <= 32_000_000) {
+            level = 3;
+        }
+        // TODO: else-if các trường hợp còn lại
+        else {
+            level = 6;
+        }
+        switch (level) {
+            case LEVEL_1:
+                tax = 0.05; // 5%
+                total += taxableIncome * tax;
+                break;
+            case LEVEL_2:
+                total += 5_000_000 * 0.05; // Cộng dồn bậc 1
+                tax = 0.1; // 10%
+                total += (taxableIncome - 5_000_000) * tax;
+                break;
+            case LEVEL_3:
+                total += 5_000_000 * 0.05; // Cộng dồn bậc 1
+                total += 5_000_000 * 0.1; // Cộng dồn bậc 2
+                tax = 0.15; // 15%
+                total += (taxableIncome - 10_000_000) * tax;
+                break;
+            case LEVEL_4:
+                total += 5_000_000 * 0.05; // Cộng dồn bậc 1
+                total += 5_000_000 * 0.1; // Cộng dồn bậc 2
+                total += 8_000_000 * 0.15; // Cộng dồn bậc 3
+                tax = 0.2; // 20%
+                total += (taxableIncome - 18_000_000) * tax;
+                break;
+
+        }
+        document.getElementById("result").innerHTML = total.toLocaleString() + " VNĐ";
+    }
+</script>
+</body>
+</html>

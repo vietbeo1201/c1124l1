@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 10</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhap so dien cua nha ban")
+    if (a > 0 && a < 50){
+        let SoDien = a * 1678
+    } else if(a <0){
+        alert("so dien khong the la so am")
+    } else if(a >= 50 && a < 100){
+        let SoDien = (a-50) * 1734 + a * 1678
+    } else if (a >= 100 && a < 200){
+        let SoDien = (a-100) * 2014 + (a-50) * 1734 + a * 1678
+    } else {
+        let SoDien = (a - 200) * 2536 + (a-100) * 2014 + (a-50) * 1734 + a * 1678
+    }
+</script>
+</body>
+</html>

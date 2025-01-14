@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 7</title>
+</head>
+<body>
+    <script>
+        let a = prompt("nhap tham so a cua ax2 + bx + c: ");
+        let b = prompt("nhap tham so b cua ax2 + bx + c: ");
+        let c = prompt("nhap tham so c cua ax2 + bx + c: ");
+        delta = b * b - 4 * a * c
+        console.log(delta);
+        if (delta < 0) {
+            alert("phuong trinh vo nghiem!")
+        } else if (delta == 0) {
+            let x = -b / (2 * a)
+            alert("nghiem cua phuong trinh la x1 = x2: " + x)
+        } else {
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            alert("nghiem cua phuong trinh la x1 = " + x1 + ", x2 = " + x2)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 9</title>
+</head>
+<body>
+<script>
+  let a = +prompt("nhap canh dau tien cua tam giac: ")
+  let b = +prompt("nhap canh thu 2 cua tam giac: ")
+  let c = +prompt("nhap canh thu 3 cua tam giac: ")
+  console.log(a, b, c)
+  console.log('BT1', a > 0 && b > 0 && c > 0);
+  console.log('BT2', a + b > c);
+  console.log('BT3', b + c > a);
+  console.log('BT4', a + c > b);
+  if (a > 0 && b > 0 && c > 0){
+    if (a + b > c ){
+      if ( b + c > a){
+        if (a + c > b){
+          alert("day la canh cua 1 tam giac")
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>

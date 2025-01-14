@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 12</title>
+</head>
+<body>
+<script>
+    // A = P x (1 + r)^n
+    // A = FV (Future Value - Giá trị tương lai) là số tiền bạn sẽ trả trong tương lai nhận được.
+    // P = PV (Present Value - Giá trị hiện tại) là số tiền ban đầu bạn đầu tư.
+    // r là lãi suất hàng năm.
+    // n là số chu kỳ lãi kép.
+    let P = +prompt("so tien ban vay")
+    let r = +prompt("nhap lai suat(%): ")
+    let n = +prompt("chu ki lai kep")
+    A = P * (1 + r/100/12) ** (n * 12)
+    alert("Tong so tien ban phai nop la: " + A)
+</script>
+</body>
+</html>

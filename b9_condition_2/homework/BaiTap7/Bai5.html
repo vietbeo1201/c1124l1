@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+  //nhap diem giua ki
+  let giuaki = prompt("nhap diem giua ki")
+  //nhap diem cuoi ki
+  let cuoiki = prompt("nhap diem cuoi ki")
+  //diem giua ki x2 & diem cuoi ki x3 & chia trung binh (/5) de tim hoc luc
+  diemTB = (cuoiki *3 + giuaki * 2) / 5
+   if (diemTB < 4) {
+     document.write("hoc sinh co hoc luc kem voi diem trung binh la: " + diemTB)
+   } else if ( 4 <= diemTB && diemTB < 5.5) {
+     document.write("hoc sinh co hoc luc trung binh yeu voi diem trung binh la: " + diemTB)
+   } else if ( 5.5 <= diemTB && diemTB < 7) {
+     document.write("hoc sinh co hoc luc trung binh voi diem trung binh la: " + diemTB)
+   } else if ( 7 <= diemTB && diemTB < 8.5) {
+     document.write("hoc sinh co hoc luc kha voi diem trung binh la: " + diemTB)
+   } else {
+     document.write("hoc sinh co hoc luc gioi voi diem trung binh la: " + diemTB)
+   }
+</script>
+</body>
+</html>
