@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+<script>
+  let fibonacci = [0, 1]
+  let sum = 0
+  for (let i = 2; i <= 19; i++) {
+    // fibonacci[i] = fibonacci[i-1] + fibonacci[i-2]
+    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+  }
+for (let j = 0; j < fibonacci.length; j++) {
+  sum = fibonacci[j] + sum
+}
+console.log(fibonacci.length)
+document.write(sum)
+</script>
+</body>
+</html>

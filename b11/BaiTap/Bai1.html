@@ -5,6 +5,24 @@
     <title>Bài 1</title>
 </head>
 <body>
+<table id="BCC" border= "1"></table>
 
+<script>
+    let tabledata = ``;
+    for (let i = 1; i < 10; i++) {
+        tabledata +=
+            `<tr>
+                <td>2 x ${i} = ${2 * i}</td>
+                <td>3 x ${i} = ${3 * i}</td>
+                <td>4 x ${i} = ${4 * i}</td>
+                <td>5 x ${i} = ${5 * i}</td>
+                <td>6 x ${i} = ${6 * i}</td>
+                <td>7 x ${i} = ${7 * i}</td>
+                <td>8 x ${i} = ${8 * i}</td>
+                <td>9 x ${i} = ${9 * i}</td>
+            </tr>`
+    }
+    document.getElementById("BCC").innerHTML = tabledata;
+</script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+<body>
+<script>
+    mylist = []
+    sum = 0
+    for (var i = 0; true; i++) {
+        if (i % 7 === 0) {
+            mylist.push(i)
+        }
+        if (mylist.length === 30) {
+            break;
+        }
+    }
+    for (let j = 0; j < mylist.length; j++) {
+        sum = sum + mylist[j]
+    }
+    document.write(sum)
+</script>
+</body>
+</html>

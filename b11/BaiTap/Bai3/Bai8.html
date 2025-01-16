@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<div>
+    <button onclick="guess_number()">Play</button>
+</div>
+<script>
+
+    function guess_number() {
+        // give prompt to insert the min, max
+        min = +prompt("min: ");
+        max = +prompt("max: ");
+        // give random number from min - max
+        number = Math.floor(Math.random() * (max - min) + min);
+        // give prompt to guess the number
+        guess = +prompt("guess: ");
+        // 3 times guess
+        for (i = 0; i < 2; i++) {
+            console.log(i);
+            if (guess < number) {
+                alert("to small"); // if the number is smaller alert:
+                guess = +prompt("guess: ");
+            } else if (guess > number) {
+                alert("to big"); // if the number is bigger alert:
+                guess = +prompt("guess: ");
+            } else {
+                document.write("congratulations u are right ^^ "); // if the number is correct print: Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi
+                break;
+            }
+        }
+        if (guess !== number) {
+            document.write("game over"); // if out of turn print: game over
+        }
+    }
+</script>
+</body>
+</html>

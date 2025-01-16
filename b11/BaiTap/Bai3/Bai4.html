@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 4</title>
+</head>
+<body>
+<script>
+    //print 5 number from fibonacci % 5 = 0
+    // identify the fibonacci list
+    let fibonacci = [0, 1]
+    let mylist = []
+    for (let i = 2; true; i++) {
+        fibonacci[i] = fibonacci[i-1] + fibonacci[i-2]
+        if (fibonacci[i] % 5 === 0){
+            mylist.push(fibonacci[i])
+        }
+        if (mylist.length === 5){
+            break
+        }
+    }
+    document.write(mylist)
+
+</script>
+</body>
+</html>
