@@ -53,19 +53,30 @@ Level.addEventListener("change", function () {
     createMaze();
 })
 
+
+class Character {
+    constructor(name, img, position) {
+        this.name = name;
+        this.img = img;
+        this.position = position;
+    }
+}
 let maze = document.getElementById('maze-container');
-let nobita = document.getElementById('nobita');
-let sizuka = document.getElementById('sizuka');
+const character1 = new Character("nobita","Nobita.jpeg",[0, 0]);
+let character2 = new character2("sizuka","sizuka.jpeg",[0, 0]);
+//event(e)
 
-function setNobitaPosition(x, y) {
-    nobita.style.left = x + 'px';
-    nobita.style.top = y + 'px';
-}
+nobita.pos = getpos(nobita);
+display(nobita);
 
-function setSizukaPosition(x, y) {
-    sizuka.style.left = x + 'px';
-    sizuka.style.top = y + 'px';
+function display(person)
+{
+    print(person)
 }
+ function getpos(person){
+     //pos
+     return pos;
+ }
 
 // create maze by upper matrix
 function createMaze() {
@@ -98,7 +109,6 @@ function getnobitaPosition() {
             if (mazearray[i][j] == 2) {
                 position[0] = i;
                 position[1] = j;
-
             }
         }
     }
